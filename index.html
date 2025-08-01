@@ -1,117 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PepeTheGambler Presale</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PepeTheGambler</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #0b2e1b;
-      color: #fffbd8;
       margin: 0;
       padding: 0;
-    }
-    header {
-      background-color: #0e3a22;
-      padding: 1rem 2rem;
+      background-color: #0b2e1b;
+      font-family: 'Inter', sans-serif;
+      color: #fffbd8;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
-    }
-    nav a {
-      margin-left: 1.5rem;
-      color: #ffd700;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .hero {
+      justify-content: center;
+      min-height: 100vh;
       text-align: center;
-      padding: 4rem 2rem;
-      background: #0b2e1b;
     }
-    .hero h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .hero img {
-      max-width: 300px;
-      border-radius: 16px;
-      box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+    img {
+      max-width: 350px;
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
       margin-bottom: 2rem;
     }
-    .buy-box {
-      background-color: #113c23;
-      padding: 2rem;
-      margin: 2rem auto;
-      max-width: 400px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
-    }
-    .buy-box input {
-      width: 100%;
-      padding: 0.75rem;
-      margin: 1rem 0;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-    .buy-box button {
-      width: 100%;
-      padding: 0.75rem;
-      background-color: #ffd700;
-      color: #0e3a22;
-      font-weight: bold;
-      font-size: 1rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-top: 0.5rem;
-    }
-    .buy-box .stats {
-      margin-top: 1rem;
-      font-size: 0.9rem;
-      color: #b7ffc6;
-    }
-    .slogan {
-      margin-top: 1rem;
-      font-style: italic;
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
       color: #ffd700;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      color: #b7ffc6;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div><strong>PepeTheGambler</strong></div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#tokenomics">Tokenomics</a>
-      <a href="#roadmap">Roadmap</a>
-      <a href="#whitepaper">Whitepaper</a>
-      <a href="#buy">Buy $PTG</a>
-    </nav>
-  </header>
+  <img src="pepe-sitting-on-gold.png" alt="PepeTheGambler sitting on gold, with cards and cigar" />
+  <h1>PepeTheGambler</h1>
+  <p>The house always memes. The gamble starts here.</p>
+</body>
+</html>
 
-  <section class="hero">
- <img src="pepe-sitting-on-gold.png" alt="PepeTheGambler sitting on gold, with cards and cigar" />
-
-    <h1>$PTG Presale is Live!</h1>
-    <p class="slogan">“The house always memes.”</p>
-    <p>Be the first to gamble on gambling itself.</p>
-    <div class="buy-box" id="buy">
-      <label for="amount">Amount to spend (SOL):</label>
-      <input type="number" id="amount" placeholder="1.5" />
-      <p>You will receive:</p>
-      <input type="text" id="received" value="21,739,130.43 $PTG" disabled />
-      <button>CONNECT WALLET</button>
-      <button>BUY $PTG</button>
-      <div class="stats">
-        🔥 Raised: 328 / 420 SOL<br>
-        📈 Price per $PTG: 0.000000069 SOL<br>
-        ⏳ Time Left: 5d 4h 31m
-      </div>
-    </div>
   </section>
 </body>
 </html>
