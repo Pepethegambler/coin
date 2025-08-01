@@ -13,7 +13,7 @@
       margin: 0;
       padding: 0;
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(145deg, #0b2e1b 0%, #071f13 100%);
+      background: radial-gradient(circle at top, #132d1d 0%, #050e08 100%);
       color: #fffbd8;
     }
     header {
@@ -21,9 +21,11 @@
       text-align: center;
       background: #113c23;
       color: #ffd700;
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: bold;
+      letter-spacing: 1px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      text-shadow: 0 0 10px #ffd700;
     }
     .hero {
       display: flex;
@@ -32,54 +34,68 @@
       justify-content: center;
       align-items: center;
       gap: 3rem;
-      padding: 4rem 2rem;
+      padding: 5rem 2rem;
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle, rgba(255, 215, 0, 0.15), transparent 70%);
+      z-index: 0;
     }
     .hero img {
-      width: 350px;
+      width: 360px;
       border-radius: 20px;
-      box-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
+      box-shadow: 0 0 60px rgba(255, 215, 0, 0.6);
+      z-index: 1;
     }
     .hero-content {
-      max-width: 500px;
+      max-width: 520px;
       text-align: left;
+      z-index: 1;
     }
     .hero-content h1 {
-      font-size: 3rem;
-      margin: 0;
+      font-size: 3.2rem;
+      margin: 0 0 1rem;
       color: #ffd700;
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
     }
     .hero-content p {
-      font-size: 1.2rem;
-      margin: 1rem 0;
-      color: #b7ffc6;
+      font-size: 1.3rem;
+      margin: 0 0 1.5rem;
+      color: #c2ffc9;
+      line-height: 1.6;
     }
     .countdown {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       font-weight: bold;
       background: linear-gradient(135deg, #ffd700, #ff8c00);
       color: #0e3a22;
-      padding: 0.75rem 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+      padding: 1rem 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
       display: inline-block;
       animation: pulse 2s infinite;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
     .cta-button {
       display: inline-block;
-      background-color: #ffd700;
+      background: linear-gradient(to right, #ffd700, #ffcc00);
       color: #0e3a22;
-      padding: 0.9rem 2rem;
-      font-size: 1.1rem;
+      padding: 1rem 2.2rem;
+      font-size: 1.2rem;
       font-weight: bold;
       border: none;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
       cursor: pointer;
       text-decoration: none;
+      transition: transform 0.2s ease;
     }
     .cta-button:hover {
-      transform: scale(1.05);
+      transform: scale(1.07);
+      box-shadow: 0 0 35px rgba(255, 215, 0, 0.6);
     }
     @keyframes pulse {
       0% { transform: scale(1); }
@@ -87,7 +103,7 @@
       100% { transform: scale(1); }
     }
     footer {
-      margin-top: 5rem;
+      margin-top: 6rem;
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
@@ -102,9 +118,9 @@
     <img src="pepe-sitting-on-gold.png" alt="Pepe sitting on gold, with cards and cigar">
     <div class="hero-content">
       <h1>The House Always Memes</h1>
-      <p>The presale for $PTG starts soon. Are you ready to gamble on gambling itself?</p>
+      <p>The presale for $PTG is not just a launch—it's an event. A bet on the most legendary frog in crypto history. Are you in?</p>
       <div class="countdown" id="countdown">⏳ Loading countdown...</div><br>
-      <a href="#" class="cta-button">Join Presale</a>
+      <a href="#" class="cta-button">🎲 Join the Presale</a>
     </div>
   </section>
   <footer>
@@ -136,4 +152,3 @@
   </script>
 </body>
 </html>
-
