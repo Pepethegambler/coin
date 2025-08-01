@@ -58,8 +58,20 @@
     }
     .countdown {
       margin-top: 1.5rem;
-      font-size: 1.1rem;
-      color: #ffd700;
+      font-size: 1.4rem;
+      font-weight: bold;
+      background: linear-gradient(135deg, #ffd700, #ff8c00);
+      color: #0e3a22;
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+      display: inline-block;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
     }
   </style>
 </head>
