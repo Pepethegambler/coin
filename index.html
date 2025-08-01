@@ -6,58 +6,54 @@
   <title>PepeTheGambler</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       padding: 0;
-      background-color: #0b2e1b;
       font-family: 'Inter', sans-serif;
+      background: linear-gradient(145deg, #0b2e1b 0%, #071f13 100%);
       color: #fffbd8;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
-    .container {
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: #113c23;
+      color: #ffd700;
+      font-size: 2rem;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .hero {
       display: flex;
       flex-direction: row;
-      align-items: center;
-      gap: 3rem;
-      padding: 2rem;
       flex-wrap: wrap;
       justify-content: center;
-      text-align: left;
+      align-items: center;
+      gap: 3rem;
+      padding: 4rem 2rem;
     }
-    img {
-      max-width: 350px;
+    .hero img {
+      width: 350px;
       border-radius: 20px;
       box-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
     }
-    .content {
-      max-width: 400px;
+    .hero-content {
+      max-width: 500px;
+      text-align: left;
     }
-    h1 {
-      font-size: 2.5rem;
+    .hero-content h1 {
+      font-size: 3rem;
       margin: 0;
       color: #ffd700;
     }
-    p {
+    .hero-content p {
       font-size: 1.2rem;
-      margin-top: 0.5rem;
+      margin: 1rem 0;
       color: #b7ffc6;
     }
-    .buy-button {
-      margin-top: 1.5rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #ffd700;
-      border: none;
-      border-radius: 8px;
-      color: #0e3a22;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
     .countdown {
-      margin-top: 1.5rem;
       font-size: 1.4rem;
       font-weight: bold;
       background: linear-gradient(135deg, #ffd700, #ff8c00);
@@ -67,25 +63,53 @@
       box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
       display: inline-block;
       animation: pulse 2s infinite;
+      margin-bottom: 1rem;
+    }
+    .cta-button {
+      display: inline-block;
+      background-color: #ffd700;
+      color: #0e3a22;
+      padding: 0.9rem 2rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .cta-button:hover {
+      transform: scale(1.05);
     }
     @keyframes pulse {
       0% { transform: scale(1); }
       50% { transform: scale(1.05); }
       100% { transform: scale(1); }
     }
+    footer {
+      margin-top: 5rem;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #7bd68b;
+      background: #0e3a22;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="pepe-sitting-on-gold.png" alt="PepeTheGambler sitting on gold, with cards and cigar" />
-    <div class="content">
-      <h1>PepeTheGambler</h1>
-      <p>The house always memes. The gamble starts here.</p>
-      <div class="countdown" id="countdown">Loading countdown...</div>
-      <button class="buy-button">Join Presale</button>
+  <header>PEPE THE GAMBLER</header>
+  <section class="hero">
+    <img src="pepe-sitting-on-gold.png" alt="Pepe sitting on gold, with cards and cigar">
+    <div class="hero-content">
+      <h1>The House Always Memes</h1>
+      <p>The presale for $PTG starts soon. Are you ready to gamble on gambling itself?</p>
+      <div class="countdown" id="countdown">⏳ Loading countdown...</div><br>
+      <a href="#" class="cta-button">Join Presale</a>
     </div>
-  </div>
-
+  </section>
+  <footer>
+    © 2025 PepeTheGambler — Not financial advice. Just vibes.
+  </footer>
   <script>
     const countdownElement = document.getElementById('countdown');
     const targetDate = new Date("2025-09-01T00:00:00").getTime();
@@ -112,5 +136,4 @@
   </script>
 </body>
 </html>
-
 
