@@ -56,6 +56,11 @@
       font-weight: bold;
       cursor: pointer;
     }
+    .countdown {
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+      color: #ffd700;
+    }
   </style>
 </head>
 <body>
@@ -64,9 +69,35 @@
     <div class="content">
       <h1>PepeTheGambler</h1>
       <p>The house always memes. The gamble starts here.</p>
+      <div class="countdown" id="countdown">Loading countdown...</div>
       <button class="buy-button">Join Presale</button>
     </div>
   </div>
+
+  <script>
+    const countdownElement = document.getElementById('countdown');
+    const targetDate = new Date("2025-09-01T00:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance <= 0) {
+        countdownElement.innerHTML = "🎉 Presale is live!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownElement.innerHTML = `⏳ Presale starts in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
 </body>
 </html>
 
